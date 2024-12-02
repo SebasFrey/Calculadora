@@ -12,3 +12,4 @@ C:\Users\Centro de Control I\Desktop\Ruta De Aprendizaje\Proyecto C#\Calculadora
 C:\Users\Centro de Control I\Desktop\Ruta De Aprendizaje\Proyecto C#\Calculadora\obj\Debug\net9.0\Calculadora.pdb
 C:\Users\Centro de Control I\Desktop\Ruta De Aprendizaje\Proyecto C#\Calculadora\obj\Debug\net9.0\Calculadora.genruntimeconfig.cache
 C:\Users\Centro de Control I\Desktop\Ruta De Aprendizaje\Proyecto C#\Calculadora\obj\Debug\net9.0\ref\Calculadora.dll
+C:\Users\Centro de Control I\Desktop\Ruta De Aprendizaje\Proyecto C#\Calculadora\obj\Debug\net9.0\Calculadora.sourcelink.json
