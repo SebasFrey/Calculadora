@@ -55,10 +55,7 @@ public class Calciuladora
       default:
         Console.WriteLine("Operacion Invalidad.");
         break;
+        
     }
-
-
-
   }
-
 }
