@@ -36,16 +36,18 @@ Para ejecutar este programa, necesitas:
 ### Ejemplo de uso
 
 === Calculadora ===
+
 ¿Qué operación desea realizar?
+
 1. Suma
 2. Resta
 3. Multiplicación
 4. División
 5. Salir
-Ingrese el número de la operación: 1
-Ingrese el primer número: 10
-Ingrese el segundo número: 5
-El resultado de la suma es: 15
+   Ingrese el número de la operación: 1
+   Ingrese el primer número: 10
+   Ingrese el segundo número: 5
+   El resultado de la suma es: 15
 
 ## Notas importantes
 
@@ -59,4 +61,3 @@ El resultado de la suma es: 15
 - Añadir soporte para más operaciones (e.g., exponenciación, raíces cuadradas).
 - Implementar una interfaz gráfica (GUI) usando WinForms o WPF.
 - Validación avanzada de entradas y soporte para números decimales en formatos internacionales.
-
