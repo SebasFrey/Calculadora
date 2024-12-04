@@ -1,65 +1,86 @@
 ﻿using System;
 
-
-public class Calciuladora
+public class Calculadora
 {
-
-  public static void Main(string[] args)
-  {
-    Console.WriteLine("===Calculadora===");
-    Console.WriteLine("¿Que Operacion Desea Realizar?");
-    Console.WriteLine("1. Suma");
-    Console.WriteLine("2. Resta");
-    Console.WriteLine("3. Multiplicacion");
-    Console.WriteLine("4. Division");
-    Console.WriteLine("5. Salir");
-
-    Console.Write("Ingrese El Numero De La Operacion: ");
-    string operacion = Console.ReadLine();
-
-    Console.Write("Ingrese Un Primer Numero: ");
-    string entrada1 = Console.ReadLine();
-    double num1 = double.Parse(entrada1);
-
-    Console.Write("Ingrese Un Segundo Numero: ");
-    string entrada2 = Console.ReadLine();
-    double num2 = double.Parse(entrada2);
-
-    double suma = num1 + num2;
-
-    double resta = num1 - num2;
-
-    double multiplicacion = num1 * num2;
-
-    double division = num1 / num2;
-
-    switch (operacion)
+    public static void Main(string[] args)
     {
+        // Mostrar menú de operaciones
+        Console.WriteLine("=== Calculadora ===");
+        Console.WriteLine("¿Qué operación desea realizar?");
+        Console.WriteLine("1. Suma");
+        Console.WriteLine("2. Resta");
+        Console.WriteLine("3. Multiplicación");
+        Console.WriteLine("4. División");
+        Console.WriteLine("5. Salir");
 
-      case "1":
-        Console.WriteLine("El Resultado De La Suma Es: " + suma);
-        break;
+        // Solicitar al usuario el número de operación
+        Console.Write("Ingrese el número de la operación: ");
+        string operacion = Console.ReadLine();
 
-      case "2":
-        Console.WriteLine("El Resultado De La Resta Es: " + resta);
-        break;
+        // Verificar si se desea salir
+        if (operacion == "5")
+        {
+            Console.WriteLine("Hasta luego");
+            return; // Salir del programa
+        }
 
-      case "3":
-        Console.WriteLine("El Resultado De La Multiplicacion Es: " + multiplicacion);
-        break;
+        // Solicitar los números al usuario con validación
+        double num1 = ObtenerNumero("Ingrese el primer número: ");
+        double num2 = ObtenerNumero("Ingrese el segundo número: ");
 
-      case "4":
-        Console.WriteLine("El Resultado De La Division Es: " + division);
-        break;
+        // Realizar la operación seleccionada
+        switch (operacion)
+        {
+            case "1": // Suma
+                Console.WriteLine("El resultado de la suma es: " + (num1 + num2));
+                break;
 
-      case "5":
-        Console.WriteLine("Hasta Luego");
-        break;
-        
-      default:
-        Console.WriteLine("Operacion Invalidad.");
-        break;
+            case "2": // Resta
+                Console.WriteLine("El resultado de la resta es: " + (num1 - num2));
+                break;
 
+            case "3": // Multiplicación
+                Console.WriteLine("El resultado de la multiplicación es: " + (num1 * num2));
+                break;
+
+            case "4": // División
+                // Verificar si el segundo número es cero
+                if (num2 == 0)
+                {
+                    Console.WriteLine("Error: No se puede dividir por cero.");
+                }
+                else
+                {
+                    Console.WriteLine("El resultado de la división es: " + (num1 / num2));
+                }
+                break;
+
+            default:
+                Console.WriteLine("Operación inválida.");
+                break;
+        }
     }
-  }
+
+    // Método para obtener un número con validación de entrada
+    private static double ObtenerNumero(string mensaje)
+    {
+        double numero;
+        bool esNumeroValido;
+
+        // Solicitar un número al usuario hasta que se ingrese un número válido
+        do
+        {
+            Console.Write(mensaje);
+            string entrada = Console.ReadLine();
+            esNumeroValido = double.TryParse(entrada, out numero);
+
+            if (!esNumeroValido)
+            {
+                Console.WriteLine("Por favor, ingrese un número válido.");
+            }
+
+        } while (!esNumeroValido);
+
+        return numero;
+    }
 }

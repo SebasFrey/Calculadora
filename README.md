@@ -10,8 +10,9 @@
   - **Resta**
   - **Multiplicación**
   - **División**
-- Validación básica de entradas.
+- Validación de entradas (números válidos).
 - Manejo de errores comunes (e.g., evitar divisiones entre cero).
+- Repetición de operaciones hasta que el usuario decida salir.
 
 ## Requisitos
 
@@ -25,33 +26,32 @@ Para ejecutar este programa, necesitas:
 
 1. Clona este repositorio en tu máquina local o copia el código fuente.
 2. Compila el programa usando el siguiente comando en tu terminal/prompt:
-   ```bash
-   dotnet run
-   ```
+
 3. Sigue las instrucciones que aparecerán en la consola:
    - Ingresa el primer número.
    - Ingresa el segundo número.
    - Selecciona la operación que deseas realizar (suma, resta, multiplicación o división).
+   - Si deseas realizar otra operación, selecciona nuevamente la operación o ingresa "5" para salir.
 
 ### Ejemplo de uso
 
-```plaintext
-===Calculadora===
-Ingrese Un Primer Numero: 10
-Ingrese Un Segundo Numero: 5
-¿Qué Operación Desea Realizar?
+=== Calculadora ===
+¿Qué operación desea realizar?
 1. Suma
 2. Resta
 3. Multiplicación
 4. División
-Ingrese El Numero De La Operacion: 1
-El Resultado De La Suma Es: 15
-```
+5. Salir
+Ingrese el número de la operación: 1
+Ingrese el primer número: 10
+Ingrese el segundo número: 5
+El resultado de la suma es: 15
 
 ## Notas importantes
 
 - Asegúrate de ingresar números válidos; las entradas no numéricas no son aceptadas.
 - La división entre cero mostrará un mensaje de error.
+- El programa permite realizar múltiples operaciones hasta que se elija salir (opción "5").
 - Esta calculadora está diseñada como un proyecto educativo básico para practicar C# y programación en consola.
 
 ## Mejoras futuras
@@ -59,3 +59,4 @@ El Resultado De La Suma Es: 15
 - Añadir soporte para más operaciones (e.g., exponenciación, raíces cuadradas).
 - Implementar una interfaz gráfica (GUI) usando WinForms o WPF.
 - Validación avanzada de entradas y soporte para números decimales en formatos internacionales.
+
